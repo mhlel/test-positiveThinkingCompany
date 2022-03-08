@@ -16,10 +16,9 @@ public final class Partition {
             throw new Exception("La taille est null ou negative");
         }
 
-         List resultOfPartition= new ArrayList<>(liste.stream()
+        return new ArrayList<>(liste.stream()
                 .collect(Collectors.groupingBy(s -> (s - 1) / taille))
                 .values());
-         return resultOfPartition;
     }
 	
 }
